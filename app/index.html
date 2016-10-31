@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Side Address Book</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <body>
+    <div class="container">
+      <form class="form-wrapper" action="">
+        <label>
+          First Name:
+        <input id="newFirstName" type="text" name="your-name" size="35" placeholder="First name" required>
+        <span class="callout">
+          Fill with name
+          </span><br>
+        </label> Last name:
+        <input id="newLastName" type="text" name="your-last-name" size="35" placeholder="Last name" required>
+        <span class="callout">
+          Fill with last name
+          </span><br>
+        <label>
+          Email:
+        <input id="newEmail" type="text" name="email" size="35" placeholder="Email" required>
+        </label>
+        <select id="newCountry" name="country-list">
+        <option class="country" value="">
+          Select country
+          </option>        
+      </select>
+            <input type="button" class="add" onclick="addRow();" value=" Add ">
+      </form>
+    </div>
+
+
+
+
+<div id="wrapper">
+<table id="dataTable" cellspacing="2" cellpadding="5" border="1">
+<tr>
+<th>First name</th>
+<th>Last name</th>
+<th>Email</th>
+<th>Country</th>
+</tr>
+
+<tr id="row1">
+<td id="firstNameRow1">Xavier</td>
+<td id="lastNameRow1">Hernández</td>
+<td id="emailRow1">xavi@gmail.com</td>
+<td id="countryRow1">Spain</td>
+
+<td>
+<input type="button" id="editButton1" value="Edit" class="edit" onclick="editRow('1')">
+<input type="button" id="saveButton1" value="Save" class="save" onclick="saveRow('1')">
+<input type="button" value="Delete" class="delete" onclick="deleteRow('1')">
+</td>
+</tr>
+
+<tr id="row2">
+<td id="firstNameRow2">Zlatan</td>
+<td id="lastNameRow2">Ibrahimovic</td>
+<td id="emailRow2">ibra@hotmail.com</td>
+<td id="countryRow2">Sweden</td>
+
+<td>
+<input type="button" id="editButton2" value="Edit" class="edit" onclick="editRow('2')">
+<input type="button" id="saveButton2" value="Save" class="save" onclick="saveRow('2')">
+<input type="button" value="Delete" class="delete" onclick="deleteRow('2')">
+</td>
+</tr>
+
+<tr id="row3">
+<td id="firstNameRow3">Alessandro</td>
+<td id="lastNameRow3">Del Piero</td>
+<td id="emailRow3">pinturricchio@outlook.com</td>
+<td id="countryRow3">Italia</td>
+
+<td>
+<input type="button" id="editButton3" value="Edit" class="edit" onclick="editRow('3')">
+<input type="button" id="saveButton3" value="Save" class="save" onclick="saveRow('3')">
+<input type="button" value="Delete" class="delete" onclick="deleteRow('3')">
+</td>
+</tr>
+
+</table>
+</div>
+
+  </body>
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
