@@ -1,5 +1,5 @@
 # Client side address book
-The code sucks this was a non public quick task
+Non public quick task
 
 # License
  MIT License
